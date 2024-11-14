@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IRIS  FLOWER   PREDICTION</title>
+</head>
+<body>
+<h1><center><marquee> <font color="green"><b> IRIS FLOWER  CLASSIFICSATION BY USING MACHINE LEARNING TECHNIQUES</b></font> </marquee></center></h1>
+
+<center><img src="{{ url_for('static',filename='irisflower.jpg')}}"></center><br>
+<h1><b><font color="red"> Enter data of new flower </font></b></h1>
+<form action="/predict" method="post">
+  <label for="sl">Sepal length:</label><br>
+  <input type="text" id="sl" name="sl"><br>
+  <label for="sw">sepal width:</label><br>
+  <input type="text" id="sw" name="sw"><br>
+  <label for="pl">Petal length:</label><br>
+  <input type="text" id="pl" name="pl"><br>
+  <label for="pw">Petal width:</label><br>
+  <input type="text" id="pw" name="pw"><br><br>
+    <input type="submit" value="Submit">
+    <input type="button" value="Reset">
+</form>
+<h1><font color="red">{{predicted_flower}}</font> </h1>
+</body>
+</html>
